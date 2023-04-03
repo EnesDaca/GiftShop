@@ -10,7 +10,7 @@ export const Hero = () => {
             <Link to="/products" type="button" className="text-white tirkiz hover:tirkiz2 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 mr-2 mb-2 focus:outline-none dark:focus:ring-blue-800">Explore eBooks</Link>
         </div>
         <div className="visual my-5 lg:max-w-xl">
-            <img className="rounded-lg max-h-full" src={giftshop} alt="Gift Shop Image" />
+            <img className="rounded-lg max-h-full" src={giftshop} alt="Gift Shop" />
         </div>
     </section>
   )
