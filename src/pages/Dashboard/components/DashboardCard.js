@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { ProductCard } from "../../../components"
 
 export const DashboardCard = ({order}) => {
   return (
@@ -7,16 +8,22 @@ export const DashboardCard = ({order}) => {
             <span>Order Id: {order.id}</span>
             <span>Total: ${order.amount_paid}</span>
         </div>
-        { order.cartList.map((product) => (
+{ order.cartList.map((product) => (
             <div key={product.id} className="flex flex-wrap justify-between max-w-4xl m-auto p-2 my-5 ">
                 <div className="flex">
-                    <Link to={`${process.env.REACT_APP_HOST}/products/${product.id}`}>
+                    {/* <Link to={`/products/${product.id}`}>
                         <img className="w-32 rounded" src={product.poster} alt={product.name} />
-                    </Link>
+                    </Link> */}
+                    <ProductCard key={product.id} product={product}>
+                    <img className="w-32 rounded" src={product.poster} alt={product.name} />
+                    </ProductCard>
                     <div className="">
-                        <Link to={`${process.env.REACT_APP_HOST}/products/${product.id}`}>
+                        {/* <Link to={`/products/${product.id}`}>
                             <p className="text-lg ml-2 dark:text-slate-200">{product.name}</p>
-                        </Link>
+                        </Link> */}
+                        <ProductCard key={product.id} product={product} >
+                        <p className="text-lg ml-2 dark:text-slate-200">{product.name}</p>
+                        </ProductCard>
                         <div className="text-lg m-2 dark:text-slate-200">
                             <span>${product.price}</span>
                         </div>
