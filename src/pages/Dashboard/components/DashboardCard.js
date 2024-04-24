@@ -1,7 +1,5 @@
 import { ProductCard } from "../../../components";
-{
-  /*import { Link } from "react-router-dom" */
-}
+/*import { Link } from "react-router-dom" */
 
 export const DashboardCard = ({ order }) => {
   return (
