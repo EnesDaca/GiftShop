@@ -20,6 +20,11 @@ export const ProductCard = ({product}) => {
 
     }, [cartList, product.id]);
 
+      useEffect(() => {
+    const img = new Image();
+    img.src = poster;
+  }, [poster]);
+
   return (
     <div className="m-3 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-stone-800 dark:border-gray-700">
         <Link to={`/products/${id}`} className="relative" >
